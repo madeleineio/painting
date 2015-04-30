@@ -37,8 +37,7 @@ Promise.all(years.map(function(y){
         })
     }))
 }).then(function(data){
-    console.log(data)
-    fs.writeFile(path.resolve('url-list.json'), JSON.stringify(data), function(){
+    fs.writeFile(path.resolve('data/url-list.json'), JSON.stringify(data), function(){
         console.log('ok')
         process.exit(0)
     })
